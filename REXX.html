@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>REXX MEN'S WEAR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#001f4d,#0047ab,#007bff);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00d9ff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    padding:40px;
+    position:relative;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#00d9ff;
+    filter:blur(180px);
+    opacity:0.2;
+    border-radius:50%;
+    top:-100px;
+    right:-100px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:800;
+    z-index:1;
+}
+
+.hero span{
+    color:#00d9ff;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    max-width:800px;
+    line-height:1.8;
+    z-index:1;
+}
+
+.hero button{
+    margin-top:35px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#0047ab;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.hero button:hover{
+    transform:scale(1.1);
+    background:#00d9ff;
+    color:white;
+}
+
+/* COLLECTIONS */
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    margin-top:80px;
+    margin-bottom:50px;
+    font-weight:800;
+}
+
+.collections{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:0 8% 80px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(8px);
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.card img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.card-content p{
+    line-height:1.7;
+    color:#dfefff;
+}
+
+/* OWNER */
+
+.owner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:80px 8%;
+}
+
+.owner img{
+    width:350px;
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.owner-details{
+    max-width:600px;
+}
+
+.owner-details h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.owner-details p{
+    font-size:20px;
+    line-height:1.9;
+    color:#e3f3ff;
+}
+
+.owner-details a{
+    color:#00d9ff;
+    text-decoration:none;
+}
+
+/* QR */
+
+.qr{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.qr img{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:25px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 20px;
+    text-align:center;
+    background:rgba(0,0,0,0.2);
+    margin-top:50px;
+}
+
+footer h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+footer p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ANIMATION */
+
+.fade{
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.section-title{
+    font-size:35px;
+}
+
+.owner-details h2{
+    font-size:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">REXX MEN'S WEAR</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Owner</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero fade">
+
+    <h1>WELCOME TO <span>REXX MEN'S WEAR</span></h1>
+    
+    <img src="/F.jpeg" style="width:500px; height:700PX;">
+    <p>
+        Modern Dresses From Bangalore • Rare Collections • Brand New Fashion • 
+        Unique Stylish Mens Wear Collection • Cheap And Best Quality
+    </p>
+
+    <button>Explore Collections</button>
+
+</section>
+
+<!-- COLLECTIONS -->
+
+<h2 class="section-title">NEW COLLECTIONS</h2>
+
+<section class="collections">
+
+    <div class="card fade">
+        <img src="/D1.jpeg" alt="Collection 1">
+
+        <div class="card-content">
+            <h3>Modern Bangalore Style</h3>
+
+            <p>
+                Premium quality modern shirts and stylish outfits directly from Bangalore.
+            </p>
+        </div>
+    </div>
+
+    <div class="card fade">
+        <img src="/D2.jpeg" alt="Collection 2">
+
+        <div class="card-content">
+            <h3>Rare Fashion Collection</h3>
+
+            <p>
+                Unique and trending dress collections with stylish premium look.
+            </p>
+        </div>
+    </div>
+
+    <div class="card fade">
+        <img src="/D3.jpeg" alt="Collection 3">
+
+        <div class="card-content">
+            <h3>Brand New Arrival</h3>
+
+            <p>
+                New model collections with first quality materials and latest fashion designs.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- OWNER -->
+
+<section class="owner">
+
+    <img src="/O1.png" alt="Owner Photo">
+
+    <div class="owner-details">
+
+        <h2>OWNER DETAILS</h2>
+
+        <p>
+            <strong>Owner Name:</strong> R. Mahesh
+        </p>
+
+        <p>
+            <strong>Phone:</strong> 8248658629
+        </p>
+
+        <p>
+            <strong>Instagram:</strong>
+            <a href="https://www.instagram.com/_rexx.co_?igsh=ZGwxZmFkYjA1bGcz" target="_blank">
+                @_rexx.co_
+            </a>
+        </p>
+
+        <p>
+            <strong>Threads:</strong> Add Your Threads Link Here
+        </p>
+
+        <br>
+
+        <p>
+            REXX MEN'S WEAR <br>
+            Thoothukudi 1st Gate, Muthu Nagar Beach Road, <br>
+            CSC Church Opposite, Thoothukudi.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- QR -->
+
+<section class="qr">
+
+    <h2 class="section-title">SCAN QR</h2>
+
+    <img src="/QR.jpeg" alt="QR Code">
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>THANK YOU FOR VISITING</h2>
+
+    <p>
+        Visit Again ❤️ <br><br>
+
+        REXX MEN'S WEAR <br>
+        Premium Mens Fashion Store
+    </p>
+
+</footer>
+
+</body>
