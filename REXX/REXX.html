@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REXX MEN'S WEAR</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#87CEEB,#dff6ff);
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:40px;
+    color:white;
+    background:linear-gradient(90deg,#0099ff,#00ccff);
+    animation:slideDown 1.5s ease;
+}
+
+header h1{
+    font-size:55px;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.3);
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* BUTTONS */
+
+.buttons{
+    text-align:center;
+    margin:30px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#008cff;
+    color:white;
+    padding:15px 30px;
+    margin:10px;
+    border-radius:50px;
+    font-size:18px;
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:#0059ff;
+    transform:scale(1.1);
+}
+
+/* GALLERY */
+
+.gallery{
+    width:95%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:20px;
+    padding-bottom:50px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.5s;
+    animation:fadeIn 1s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.info{
+    padding:15px;
+    text-align:center;
+}
+
+.info h3{
+    color:#008cff;
+    margin-bottom:8px;
+}
+
+.price{
+    font-size:20px;
+    color:red;
+    font-weight:bold;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0099ff;
+    color:white;
+    font-size:18px;
+}
+
+@media(max-width:1400px){
+    .gallery{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+
+@media(max-width:900px){
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .gallery{
+        grid-template-columns:1fr;
+    }
+}
+
+.thankyou{
+    text-align:center;
+    padding:20px;
+    font-size:20px;
+    color:#003366;
+    background:rgba(255,255,255,0.7);
+    margin:20px auto;
+    width:95%;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.site-logo{width:64px;height:64px;object-fit:cover;border-radius:8px}
+/* Recommended: provide shop-logo@2x.png for high-density displays */
+
+.hero{
+    width:100%;
+    max-height:420px;
+    overflow:hidden;
+    margin-top:20px;
+}
+/* Use aspect-ratio so uploaded photos scale and crop consistently. Recommended source: 1600×720+ */
+.hero img{
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    max-height:420px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>REXX MEN'S WEAR</h1>
+    <p>Premium Men's Fashion Collection</p>
+</header>
+
+<div class="buttons">
+    <a href="#" class="btn">📍 Shop Location</a>
+
+    <a href="https://maps.app.goo.gl/MFCeTYpmfdNbNBM96"
+    target="_blank"
+    class="btn">🗺 Open in Google Maps</a>
+</div>
+
+<div class="gallery">
+
+<!-- ROW 1 -->
+
+<div class="card">
+<img src="/cs1.png" alt="Shirt">
+<div class="info"><h3>Shirt</h3><div class="price">₹799</div></div>
+</div>
+
+<div class="card">
+<img src="/fp1.png" alt="Formal Pant">
+<div class="info"><h3>Formal Pant</h3><div class="price">₹799</div></div>
+</div>
+
+<div class="card">
+<img src="/j1.png" alt="Jeans">
+<div class="info"><h3>Jeans</h3><div class="price">₹999</div></div>
+</div>
+
+<div class="card">
+<img src="/RNT1.png" alt="Round Neck T-Shirt">
+<div class="info"><h3>Round Neck T-Shirt</h3><div class="price">₹300</div></div>
+</div>
+
+<div class="card">
+<img src="/cts1.png" alt="Collar T-Shirt">
+<div class="info"><h3>Collar T-Shirt</h3><div class="price">₹350</div></div>
+</div>
+
+<div class="card">
+<img src="/c2.png" alt="Caps">
+<div class="info"><h3>Caps</h3><div class="price">₹300</div></div>
+</div>
+
+<div class="card">
+<img src="/b3.png" alt="Leather Belt">
+<div class="info"><h3>Leather Belt</h3><div class="price">₹250</div></div>
+</div>
+
+<!-- ROW 2 -->
+
+<div class="card">
+<img src="/CS2.png" alt="Shirt">
+<div class="info"><h3>Shirt</h3><div class="price">₹799</div></div>
+</div>
+
+<div class="card">
+<img src="/fp2.png" alt="Formal Pant">
+<div class="info"><h3>Formal Pant</h3><div class="price">₹799</div></div>
+</div>
+
+<div class="card">
+<img src="/j2.png" alt="Jeans">
+<div class="info"><h3>Jeans</h3><div class="price">₹999</div></div>
+</div>
+
+<div class="card">
+<img src="/RNT2.png" alt="Round Neck T-Shirt">
+<div class="info"><h3>Round Neck T-Shirt</h3><div class="price">₹300</div></div>
+</div>
+
+<div class="card">
+<img src="/cts2.png" alt="Collar T-Shirt">
+<div class="info"><h3>Collar T-Shirt</h3><div class="price">₹350</div></div>
+</div>
+
+<div class="card">
+<img src="/c1.png" alt="Caps">
+<div class="info"><h3>Caps</h3><div class="price">₹300</div></div>
+</div>
+
+<div class="card">
+<img src="/b2.png" alt="Leather Belt">
+<div class="info"><h3>Leather Belt</h3><div class="price">₹250</div></div>
+</div>
+
+<!-- ROW 3 -->
+
+<div class="card">
+<img src="/CS2.png" alt="Shirt">
+<div class="info"><h3>Shirt</h3><div class="price">₹799</div></div>
+</div>
+
+<div class="card">
+<img src="/fp3.png" alt="Formal Pant">
+<div class="info"><h3>Formal Pant</h3><div class="price">₹799</div></div>
+</div>
+
+<div class="card">
+<img src="/j3.png" alt="Jeans">
+<div class="info"><h3>Jeans</h3><div class="price">₹999</div></div>
+</div>
+
+<div class="card">
+<img src="/RNT2.png" alt="Round Neck T-Shirt">
+<div class="info"><h3>Round Neck T-Shirt</h3><div class="price">₹300</div></div>
+</div>
+
+<div class="card">
+<img src="/cts2.png" alt="Collar T-Shirt">
+<div class="info"><h3>Collar T-Shirt</h3><div class="price">₹350</div></div>
+</div>
+
+<div class="card">
+<img src="/c3.png" alt="Caps">
+<div class="info"><h3>Caps</h3><div class="price">₹300</div></div>
+</div>
+
+<div class="card">
+<img src="/b3.png" alt="Leather Belt">
+<div class="info"><h3>Leather Belt</h3><div class="price">₹250</div></div>
+</div>
+
+</div>
+
+<footer>
+📍 Shop no C1, Thacher Street, Vadaku Theru,
+Railway Staff Quarters, Thoothukudi,
+Tamil Nadu 628001
+</footer>
+
+</body>
+</html>
